@@ -39,7 +39,7 @@ export default function Home() {
   }, []);
   
   return (
-    <div className="overflow-x-hidden relative min-h-screen bg-zinc-100 p-[1vh] flex flex-col items-center font-mono">
+    <div className="relative min-h-screen bg-zinc-100 p-[1vh] flex flex-col items-center font-mono">
   
      <style>{`
       @keyframes fadeSlide {
