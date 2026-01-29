@@ -12,7 +12,10 @@ module.exports = {
 		},
 		animation: {
 		  'placeholder-fade': 'placeholder-fade 2.5s ease-in-out infinite',
-		}
+		},
+		screens: {
+			'xs': '375px',
+		},
 	  }
 	}
   }

@@ -66,7 +66,7 @@ export default function Home() {
       />
 
       {/* TŁO 2 - TEKSTURA NA CAŁĄ STRONĘ */}
-      <div className="fixed bottom-0 left-0 w-[50vw] z-[0] pointer-events-none opacity-15">
+      <div className="fixed bottom-0 left-0 w-[50vw] z-0 pointer-events-none opacity-15">
           <Lottie 
             animationData={bgAnimation} 
             loop={true} 
@@ -74,7 +74,9 @@ export default function Home() {
       </div>
 
       {/* KOMPONENT HEADER / LOGO APKI */}
-      <div className="w-full max-w-4xl flex items-center justify-between mb-4 px-4 py-2 border-b-2 border-zinc-300">
+      <div className="w-full max-w-4xl flex flex-col sm:flex-row justify-between items-center mb-4 px-4 py-4 sm:py-2 border-b-2 border-zinc-300 gap-4 sm:gap-0">
+        
+        {/* LEWA STRONA: LOGO */}
         <div className="flex items-center gap-3">
           <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
           <h1 className="text-xl font-black tracking-tighter text-zinc-800">
@@ -82,21 +84,23 @@ export default function Home() {
           </h1>
         </div>
         
-        <div className="text-[10px] text-zinc-500 text-right hidden sm:block">
-          <p>STM32_PINOUT_VIEWER</p>
-          <p className="font-bold">BOARD: F746ZG</p> 
-          <Link href="https://rumcajzdev.pl/" target="_blank">
-            <div className="text-center flex flex-col items-center justify-center gap-3">
-              <div className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
-                <span className="text-md text-muted-foreground tracking-wide">
-                  Developed by <span className="font-semibold">rumcajzdev</span>
-                </span>
-                <img
-                  src="/rumcajzdevlogowhite.png"
-                  alt="RumcajzDev Logo"
-                  className="w-4 h-4 object-contain invert"
-                />
-              </div>
+        {/* PRAWA STRONA: INFO I LINK */}
+        <div className="text-[10px] text-zinc-500 text-center sm:text-right flex flex-col items-center sm:items-end gap-1">
+          <div className="leading-tight">
+            <p>STM32_PINOUT_VIEWER</p>
+            <p className="font-bold">BOARD: F746ZG</p> 
+          </div>
+
+          <Link href="https://rumcajzdev.pl/" target="_blank" className="mt-1">
+            <div className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity">
+              <span className="text-[9px] sm:text-md text-muted-foreground tracking-wide">
+                Developed by <span className="font-semibold">rumcajzdev</span>
+              </span>
+              <img
+                src="/rumcajzdevlogowhite.png"
+                alt="RumcajzDev Logo"
+                className="w-6 h-6 object-contain invert" 
+              />
             </div>
           </Link>
         </div>
@@ -106,13 +110,13 @@ export default function Home() {
       <div className="w-full max-w-4xl mb-4 px-4 py-3 bg-white/50 backdrop-blur-sm rounded-md border border-zinc-200 shadow-sm flex flex-wrap items-center justify-between text-[11px] font-medium tracking-tight">
         
         {/* LEWA STRONA: PODPOWIEDZI */}
-        <div className="flex items-center gap-4 text-zinc-500">
+        <div className="flex items-start gap-4 text-zinc-500 flex-col sm:flex-row m-auto sm:m-0">
           <div className="flex items-center gap-2">
             <span className="bg-zinc-800 text-white text-[9px] px-1.5 py-0.5 rounded uppercase font-black tracking-widest">Search</span>
             <span>Min. 2 znaki</span>
           </div>
 
-          <div className="h-4 w-[1px] bg-zinc-300 hidden sm:block" /> {/* Separator */}
+          <div className="h-4 w-px bg-zinc-300 hidden sm:block" /> {/* Separator */}
 
           <div className="flex items-center gap-2">
             <span className="bg-blue-600 text-white text-[9px] px-1.5 py-0.5 rounded uppercase font-black tracking-widest">STRICT</span>
@@ -121,8 +125,8 @@ export default function Home() {
         </div>
 
         {/* PRAWA STRONA: LEGENDA */}
-        <div className="flex items-center gap-5 mt-2 sm:mt-0 border-t sm:border-t-0 border-zinc-200 pt-2 sm:pt-0 w-full sm:w-auto">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center gap-5 mt-2 sm:mt-0 border-t sm:border-t-0 border-zinc-200 pt-2 sm:pt-0 w-full sm:w-auto  justify-around">
+          <div className="flex items-center gap-2 ">
             <div className="flex gap-1.5">
               <div className="w-3 h-3 rounded-full border border-black/10 bg-[#E6007E]" />
               <span className="text-zinc-600 uppercase">Arduino</span>
