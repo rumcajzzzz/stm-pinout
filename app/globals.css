@@ -14,13 +14,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: light only;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
   }
 }
 
 html {
   zoom: 1;
+  forced-color-adjust: none;
 }
 
 body {
